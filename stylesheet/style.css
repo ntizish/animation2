@@ -1,3 +1,17 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
 .rectangle1 {
   width: 100px;
   height: 100px;
@@ -20,4 +34,21 @@
   50% {background-color: pink;}
   75% {background-color: orange;}
   100% {background-color: red;}
+}
+
+.rectangle2 {
+  width: 100px;
+  height: 100px;
+  top: 15px;
+  position: relative;
+  background-color: green;
+  animation: r2 4s linear infinite;
+}
+
+@keyframes r2 {
+  0% {left: 0px; right: 0px;}
+  25% {left: 100px; right: 0px;}
+  50% {left: 0px; right: 0px;}
+  75% {left: 0px; right: 100px;}
+  100% {left: 0px; right: 0px;}
 }
