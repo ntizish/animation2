@@ -1,0 +1,15 @@
+.rectangle1 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: r1;
+  animation-duration: 4s;
+}
+@keyframes r1 {
+  0% {background-color: red;}
+  25% {background-color: yellow;}
+  50% {background-color: blue;}
+  75% {background-color: orange;}
+  100% {background-color: pink;}
+}
