@@ -12,18 +12,6 @@ body {
     vertical-align: middle;
 }
 
-.b {
-  animation-name: b;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-
-@keyframes b {
-  0% {filter: invert(0);}
-  50% {filter: invert(1);}
-  100% {filter: invert(0);}
-}
-
 .rectangle1 {
   width: 100px;
   height: 100px;
@@ -54,7 +42,7 @@ body {
   top: 15px;
   position: relative;
   background-color: orange;
-  animation: r2 4s linear infinite;
+  animation: r2 4s ease-in-out infinite;
 }
 
 @keyframes r2 {
@@ -85,7 +73,7 @@ body {
   width: 100px;
   height: 100px;
   align-self: center;
-  position: relative;
+  position: absolute;
   background-color: green;
   animation: r4 2s linear infinite;
 }
@@ -96,4 +84,121 @@ body {
   50% {width: 100px; height:100px;}
   75% {width: 50px; height:100px;}
   100% {width: 100px; height:100px;}
+}
+
+.rectangle5 {
+  width: 100px;
+  height: 100px;
+  top: 75px;
+  align-self: center;
+  position: relative;
+  background-color: magenta;
+  animation: r5 3s cubic-bezier(.29,.87,.91,.19) infinite;
+  animation-timing-function: cubic-bezier(.29,.87,.91,.19);
+}
+
+@keyframes r5 {
+  0% {left: 0px; right: 0px;}
+  25% {left: 100px; right: 0px;}
+  50% {left: 0px; right: 0px;}
+  75% {left: -100px; right: 0px;}
+  100% {left: 0px; right: 0px;}
+}
+
+.rectangle6 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: grey;
+  animation: r6 2s linear infinite;
+}
+
+@keyframes r6 {
+  0% {left: -50px; right: 0px; top: 50px;}
+  25% {left: 50px; right: 0px; top: 50px;}
+  50% {left: 50px; right: 0px; top: 150px;}
+  75% {left: -50px; right: 0px; top: 150px;}
+  100% {left: -50px; right: 0px; top: 50px;}
+}
+
+.rectangle7 {
+  width: 100px;
+  height: 100px;
+  top: 120px;
+  margin-bottom: 100px;
+  position: relative;
+  background-color: black;
+  animation: r7 2s linear infinite;
+}
+
+@keyframes r7 {
+  0% {transform: skew(0deg, 0deg);}
+  25% {transform: skew(15deg, 15deg);}
+  50% {transform: skew(0deg, 0deg);}
+  75% {transform: skew(-15deg, -15deg);}
+  100% {transform: skew(0deg, 0deg);}
+}
+
+.rectangle8 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: pink;
+  animation: r8 2s linear infinite;
+}
+
+@keyframes r8 {
+  0% {
+    opacity: 1;
+    transform: rotateX(90deg);
+  }
+  25% {
+    opacity: 0.5;
+    transform: rotateX(0deg);
+  }
+  50% {
+    display: none;
+    opacity: 0;
+    transform: rotateX(90deg);
+  }
+  75% {
+    opacity: 0.5;
+    transform: rotateX(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(90deg);
+  }
+}
+
+.rectangle9 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: #003366;
+  animation: r9 1s linear infinite;
+}
+
+@keyframes r9 {
+  0% {transform: scale(1); background-color: #003366;}
+  50% {transform: scale(0.5); background-color: #5f9ea0}
+  100% {transform: scale(1); background-color: #003366;}
+}
+
+.rectangle10 {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 100px;
+  position: relative;
+  background-color: #003366;
+  animation: r10 2s linear infinite;
+  animation-direction: alternate;
+}
+
+@keyframes r10 {
+  0% {transform: rotate(0deg); opacity: 100%; width: 100px; height: 100px;}
+  25% {transform: rotate(90deg); opacity: 75%; width: 75px; height: 75px;}
+  50% {transform: rotate(180deg); opacity: 50%; width: 50px; height: 50px;}
+  75% {transform: rotate(270deg); opacity: 25%; width: 25px; height: 25px;}
+  100% {transform: rotate(360deg); opacity: 0%; width: 0px; height: 0px;}
 }
