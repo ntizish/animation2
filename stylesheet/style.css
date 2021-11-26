@@ -86,7 +86,7 @@ body {
   height: 100px;
   align-self: center;
   position: absolute;
-  background-color: green;
+  background-color: #b81997;
   animation: r4 2s linear infinite;
 }
 
